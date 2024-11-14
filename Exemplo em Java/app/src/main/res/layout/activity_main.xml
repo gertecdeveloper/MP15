@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:id="@+id/BtnDeviceName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="5dp"
+       android:textSize="18sp"
+       android:text="MP15"
+       android:gravity="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.0"
+       tools:layout_editor_absoluteX="0dp" />
+
+   <TextView
+       android:id="@+id/textViewStatus"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/BtnDeviceName"
+       android:text="Status: Nenhum MP15 conectado"
+       android:layout_marginStart="20dp"
+       android:textColor="#FF0000"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:id="@+id/linearLayout_23"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="60dp" >
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btnConectar"
+          android:layout_width="150dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/button_az"
+          android:text="Conectar"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btnDesconectar"
+          android:layout_width="150dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/button_az"
+          android:text="Desconectar"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold" />
+   </LinearLayout>
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/linearLayout_23"
+       android:layout_marginTop="51dp"
+       android:layout_marginStart="20dp"
+       android:text="Numero de serie:"
+       android:textColor="#000000" />
+
+   <EditText
+       android:id="@+id/editTextSerial"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/textView2"
+       android:ems="10" >
+   </EditText>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnConnectUsb"
+       android:layout_width="134dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/linearLayout_23"
+       android:layout_toRightOf="@+id/editTextSerial"
+       android:layout_marginLeft="35dp"
+       android:layout_marginStart="35dp"
+       android:layout_marginTop="8dp"
+       android:background="@drawable/button_az"
+       android:textColor="#FFFFFF"
+       android:textStyle="bold"
+       android:text="Conectar USB" />
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnReceber"
+       android:layout_width="134dp"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/editTextSerial"
+       android:layout_marginLeft="35dp"
+       android:layout_marginStart="35dp"
+       android:layout_marginBottom="0dp"
+       android:layout_toRightOf="@+id/editTextSerial"
+       android:background="@drawable/button_az"
+       android:text="Captura do NS"
+       android:textColor="#FFFFFF"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:id="@+id/linearLayout1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/btnReceber"
+       android:orientation="vertical" >
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="20dp"
+          android:text="Informe um texto:"
+          android:textColor="#000000" />
+
+      <EditText
+          android:id="@+id/editTextDisplay"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:maxLength="22" />
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/linearLayout2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/linearLayout1">
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btnSend"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/button_az"
+          android:text="Enviar texto"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold"/>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btnClear"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/button_az"
+          android:text="Limpar display"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold"/>
+
+   </LinearLayout>
+
+
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btnInfoComplete"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/button_az"
+          android:text="Informação completa"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold"
+          android:layout_below="@+id/linearLayout2"
+          android:layout_marginTop="20dp"/>
+
+   <TextView
+       android:id="@+id/InfoCompleteTxt"
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+       android:layout_marginStart="15dp"
+       android:layout_marginEnd="15dp"
+       android:layout_marginTop="15dp"
+       android:layout_below="@+id/btnInfoComplete"
+       />
+
+
+</RelativeLayout>
